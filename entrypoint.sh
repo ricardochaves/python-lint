@@ -1,12 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/sh -l
 
 echo "Hello $1"
 
-if [ "$1" = true ]
+if [ "$1" = true ] ; then
   pylint; test_result=$?
-  if ((test_result != 0)); then
-    echo '%s\n' "Test case x failed" >&2  # write error message to stderr
-    exit $test_result                     # or exit 1
+
+  if ["$test_result" != 0] ; then
+    echo ::error :: "Pylint error"
+    exit $test_result
   fi
 fi
 
