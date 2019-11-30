@@ -28,3 +28,17 @@ if [ "$3" = true ] ; then
     fi
 
 fi
+
+if [ "$4" = true ] ; then
+
+    flake8 $1
+    exit_code=$?
+
+    if [ "$exit_code" = "0" ]; then
+        echo ::log-command ::"Flake8 ok"
+    else
+        echo ::error :: "Flake8 error"
+        exit $exit_code
+    fi
+
+fi

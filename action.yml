@@ -13,6 +13,10 @@ inputs:
     description: "User pycodestyle"
     required: false
     default: true
+  use-flake8:
+    description: "User Flake8"
+    required: false
+    default: true
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -20,3 +24,4 @@ runs:
     - ${{ inputs.python-root-list }}
     - ${{ inputs.use-pylint }}
     - ${{ inputs.use-pycodestyle }}
+    - ${{ inputs.use-flake8 }}
