@@ -1,0 +1,15 @@
+name: "Hello World"
+description: "Greet someone and record the time"
+inputs:
+  use-pylint: # id of input
+    description: "User Pylint"
+    required: false
+    default: true
+# outputs:
+#   time: # id of output
+#     description: "The time we greeted you"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.use-pylint }}
