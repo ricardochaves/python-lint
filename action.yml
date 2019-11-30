@@ -17,6 +17,10 @@ inputs:
     description: "User Flake8"
     required: false
     default: true
+  use-black:
+    description: "User Black"
+    required: false
+    default: true
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -25,3 +29,4 @@ runs:
     - ${{ inputs.use-pylint }}
     - ${{ inputs.use-pycodestyle }}
     - ${{ inputs.use-flake8 }}
+    - ${{ inputs.use-black }}

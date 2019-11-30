@@ -42,3 +42,19 @@ if [ "$4" = true ] ; then
     fi
 
 fi
+
+if [ "$5" = true ] ; then
+
+    black --check $1
+    exit_code=$?
+
+    if [ "$exit_code" = "0" ]; then
+        echo ::log-command ::"Black ok"
+    else
+        echo ::error :: "Black error"
+        exit $exit_code
+    fi
+
+fi
+
+
