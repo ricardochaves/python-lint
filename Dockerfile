@@ -1,7 +1,9 @@
 # Container image that runs your code
 FROM python:3.8.0-alpine3.10
 
-RUN pip install pylint
+RUN pip install pylint \
+    pylint_django \
+    pep8
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
