@@ -5,16 +5,18 @@ inputs:
     description: "A list with all paths to be test"
     required: false
     default: "."
-  use-pylint: # id of input
+  use-pylint:
     description: "User Pylint"
     required: false
     default: true
-# outputs:
-#   time: # id of output
-#     description: "The time we greeted you"
+  use-pycodestyle:
+    description: "User pycodestyle"
+    required: false
+    default: true
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.python-root-list }}
     - ${{ inputs.use-pylint }}
+    - ${{ inputs.use-pycodestyle }}

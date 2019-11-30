@@ -13,3 +13,18 @@ if [ "$2" = true ] ; then
     fi
 
 fi
+
+
+if [ "$3" = true ] ; then
+
+    pycodestyle $1
+    exit_code=$?
+
+    if [ "$exit_code" = "0" ]; then
+        echo ::log-command ::"pycodestyle ok"
+    else
+        echo ::error :: "pycodestyle error"
+        exit $exit_code
+    fi
+
+fi
