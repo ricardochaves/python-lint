@@ -1,8 +1,8 @@
 name: "Hello World"
 description: "Greet someone and record the time"
 inputs:
-  code-root:
-    description: "Code Root"
+  python-root-list:
+    description: "A list with all paths to be test"
     required: false
     default: "."
   use-pylint: # id of input
@@ -16,5 +16,5 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.code-root }}
+    - ${{ inputs.python-root-list }}
     - ${{ inputs.use-pylint }}
