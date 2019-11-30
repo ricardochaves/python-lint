@@ -1,12 +1,14 @@
 #!/bin/sh -l
 
-echo "Hello $2"
+echo "Use pylint: $2"
+echo "Python root: $1"
 
 if [ "$2" = true ] ; then
 
     pylint $1
     exit_code=$?
     echo "*******"
+    echo "exit_code"
     echo $exit_code
     echo "*******"
     if [ "$exit_code" = "0" ]; then
