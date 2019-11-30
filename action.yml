@@ -1,6 +1,10 @@
 name: "Hello World"
 description: "Greet someone and record the time"
 inputs:
+  code-root:
+    description: "Code Root"
+    required: false
+    default: "."
   use-pylint: # id of input
     description: "User Pylint"
     required: false
@@ -12,4 +16,5 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
+    - ${{ inputs.code-root }}
     - ${{ inputs.use-pylint }}

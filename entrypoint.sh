@@ -1,17 +1,23 @@
 #!/bin/sh -l
 
-echo "Hello $1"
+echo "Hello $2"
 
-if [ "$1" = true ] ; then
-  pylint; test_result=$?
+if [ "$2" = true ] ; then
 
-  if ["$test_result" != 0] ; then
-    echo ::error :: "Pylint error"
-    exit $test_result
-  fi
+    pylint $1
+    exit_code=$?
+    echo "*******"
+    echo $exit_code
+    echo "*******"
+    if [ "$exit_code" = "0" ]; then
+        echo ::log-command ::"Pylint ok"
+    else
+        echo ::error :: "Pylint error"
+        exit $exit_code
+    fi
+
 fi
 
 # time=$(date)
 # echo ::set-output name=time::$time
 
-echo ::log-command ::"Pylint ok"
