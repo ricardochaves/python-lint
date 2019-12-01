@@ -6,27 +6,27 @@ inputs:
     required: false
     default: "."
   use-pylint:
-    description: "User Pylint"
+    description: "Use Pylint"
     required: false
     default: true
   use-pycodestyle:
-    description: "User pycodestyle"
+    description: "Use pycodestyle"
     required: false
     default: true
   use-flake8:
-    description: "User Flake8"
+    description: "Use Flake8"
     required: false
     default: true
   use-black:
-    description: "User Black"
+    description: "Use Black"
     required: false
     default: true
   use-mypy:
-    description: "User mypy"
+    description: "Use mypy"
     required: false
     default: true
   use-isort:
-    description: "User isort"
+    description: "Use isort"
     required: false
     default: true
 runs:
