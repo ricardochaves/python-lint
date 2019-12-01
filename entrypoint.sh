@@ -45,7 +45,7 @@ fi
 
 if [ "$5" = true ] ; then
 
-    black --check --target-version py36 $1
+    black --check $1
     exit_code=$?
 
     if [ "$exit_code" = "0" ]; then
@@ -73,7 +73,7 @@ fi
 
 if [ "$7" = true ] ; then
 
-    isort -rc $1 -c
+    isort -rc -vb $1 -c
     exit_code=$?
 
     if [ "$exit_code" = "0" ]; then
