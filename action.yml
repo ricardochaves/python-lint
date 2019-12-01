@@ -1,0 +1,42 @@
+name: "Python lint"
+description: "Supports Pylint, pycodestyle, Flake8, black, mypy and isort"
+inputs:
+  python-root-list:
+    description: "A list of all paths to test"
+    required: false
+    default: "."
+  use-pylint:
+    description: "Use Pylint"
+    required: false
+    default: true
+  use-pycodestyle:
+    description: "Use pycodestyle"
+    required: false
+    default: true
+  use-flake8:
+    description: "Use Flake8"
+    required: false
+    default: true
+  use-black:
+    description: "Use Black"
+    required: false
+    default: true
+  use-mypy:
+    description: "Use mypy"
+    required: false
+    default: true
+  use-isort:
+    description: "Use isort"
+    required: false
+    default: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.python-root-list }}
+    - ${{ inputs.use-pylint }}
+    - ${{ inputs.use-pycodestyle }}
+    - ${{ inputs.use-flake8 }}
+    - ${{ inputs.use-black }}
+    - ${{ inputs.use-mypy }}
+    - ${{ inputs.use-isort }}
