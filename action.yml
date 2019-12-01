@@ -1,8 +1,8 @@
-name: "Hello World"
-description: "Greet someone and record the time"
+name: "Python lint"
+description: "Supports Pylint, pycodestyle, Flake8, black, mypy and isort"
 inputs:
   python-root-list:
-    description: "A list with all paths to be test"
+    description: "A list of all paths to test"
     required: false
     default: "."
   use-pylint:

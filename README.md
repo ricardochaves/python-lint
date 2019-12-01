@@ -1,3 +1,3 @@
 # python-lint
 
-GitHub Action for Lint your code
+GitHub Action for Lint your Python code
