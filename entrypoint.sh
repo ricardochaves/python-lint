@@ -73,7 +73,7 @@ fi
 
 if [ "$7" = true ] ; then
 
-    isort -rc -vb $1 -c --diff
+    isort -rc $1 -c --diff
     exit_code=$?
 
     if [ "$exit_code" = "0" ]; then
