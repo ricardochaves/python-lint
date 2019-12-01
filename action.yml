@@ -21,6 +21,14 @@ inputs:
     description: "User Black"
     required: false
     default: true
+  use-mypy:
+    description: "User mypy"
+    required: false
+    default: true
+  use-isort:
+    description: "User isort"
+    required: false
+    default: true
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -30,3 +38,5 @@ runs:
     - ${{ inputs.use-pycodestyle }}
     - ${{ inputs.use-flake8 }}
     - ${{ inputs.use-black }}
+    - ${{ inputs.use-mypy }}
+    - ${{ inputs.use-isort }}

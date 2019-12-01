@@ -57,4 +57,30 @@ if [ "$5" = true ] ; then
 
 fi
 
+if [ "$6" = true ] ; then
 
+    mypy $1
+    exit_code=$?
+
+    if [ "$exit_code" = "0" ]; then
+        echo ::log-command ::"mypy ok"
+    else
+        echo ::error :: "mypy error"
+        exit $exit_code
+    fi
+
+fi
+
+if [ "$7" = true ] ; then
+
+    isort $1 -c
+    exit_code=$?
+
+    if [ "$exit_code" = "0" ]; then
+        echo ::log-command ::"isort ok"
+    else
+        echo ::error :: "isort error"
+        exit $exit_code
+    fi
+
+fi

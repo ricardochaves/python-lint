@@ -8,7 +8,9 @@ RUN apk add --no-cache \
     pylint_django==2.0.13 \
     pycodestyle==2.5.0 \
     flake8==3.7.9 \
-    black==19.10b0
+    black==19.10b0 \
+    mypy==0.750 \
+    isort==4.3.21
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
