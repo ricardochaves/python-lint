@@ -66,9 +66,9 @@ runs:
     - ${{ inputs.use-black }}
     - ${{ inputs.use-mypy }}
     - ${{ inputs.use-isort }}
-    - ${{ extra-pylint-options }}
-    - ${{ extra-pycodestyle-options }}
-    - ${{ extra-flake8-options }}
-    - ${{ extra-black-options }}
-    - ${{ extra-mypy-options }}
-    - ${{ extra-isort-options }}
+    - ${{ inputs.extra-pylint-options }}
+    - ${{ inputs.extra-pycodestyle-options }}
+    - ${{ inputs.extra-flake8-options }}
+    - ${{ inputs.extra-black-options }}
+    - ${{ inputs.extra-mypy-options }}
+    - ${{ inputs.extra-isort-options }}
