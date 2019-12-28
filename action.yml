@@ -29,6 +29,32 @@ inputs:
     description: "Use isort"
     required: false
     default: true
+  extra-pylint-options:
+    description: "Extra options: pylint $(extra-pylint-options) $(python-root-list)"
+    required: false
+    default: ""
+  extra-pycodestyle-options:
+    description: "Extra options: pycodestyle $(extra-pycodestyle-options) $(python-root-list)"
+    required: false
+    default: ""
+  extra-flake8-options:
+    description: "Extra options: flake8 $(extra-flake8-options) $(python-root-list)"
+    required: false
+    default: ""
+  extra-black-options:
+    description: "Extra options: black --check $(extra-black-options) $(python-root-list)"
+    required: false
+    default: ""
+  extra-mypy-options:
+    description: "Extra options: mypy $(extra-mypy-options) $(python-root-list)"
+    required: false
+    default: ""
+  extra-isort-options:
+    description: "Extra options: isort -rc $(extra-isort-options) $(python-root-list) -c --diff "
+    required: false
+    default: ""
+
+
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -40,3 +66,9 @@ runs:
     - ${{ inputs.use-black }}
     - ${{ inputs.use-mypy }}
     - ${{ inputs.use-isort }}
+    - ${{ inputs.extra-pylint-options }}
+    - ${{ inputs.extra-pycodestyle-options }}
+    - ${{ inputs.extra-flake8-options }}
+    - ${{ inputs.extra-black-options }}
+    - ${{ inputs.extra-mypy-options }}
+    - ${{ inputs.extra-isort-options }}
