@@ -39,6 +39,28 @@ steps:
       use-black: false
       use-mypy: false
       use-isort: false
+      extra-pylint-options: ""
+      extra-pycodestyle-options: ""
+      extra-flake8-options: ""
+      extra-black-options: ""
+      extra-mypy-options: ""
+      extra-isort-options: ""
+```
+
+Command build logic list:
+
+```bash
+pylint $(extra-pylint-options) $(python-root-list)
+
+pycodestyle $(extra-pycodestyle-options) $(python-root-list)
+
+flake8 $(extra-flake8-options) $(python-root-list)
+
+black --check $(extra-black-options) $(python-root-list)
+
+mypy $(extra-mypy-options) $(python-root-list)"
+
+isort -rc $(extra-isort-options) $(python-root-list) -c --diff
 ```
 
 ## License
