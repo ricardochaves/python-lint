@@ -63,6 +63,10 @@ mypy $(extra-mypy-options) $(python-root-list)"
 isort -rc $(extra-isort-options) $(python-root-list) -c --diff
 ```
 
+## Versions used
+
+To identify the version used you must consult the [CHANGELOG.md](https://github.com/ricardochaves/python-lint-image/blob/master/CHANGELOG.md) of the image used in our [Dockerfile](Dockerfile).
+
 ## License
 
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
