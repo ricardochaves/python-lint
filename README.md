@@ -22,7 +22,7 @@ Basic:
 ```yml
 steps:
   - uses: actions/checkout@v1
-  - uses: ricardochaves/python-lint@v1.1.0
+  - uses: ricardochaves/python-lint@v1.2.0
 ```
 
 Options:
@@ -30,7 +30,7 @@ Options:
 ```yml
 steps:
   - uses: actions/checkout@v1
-  - uses: ricardochaves/python-lint@v1.1.0
+  - uses: ricardochaves/python-lint@v1.2.0
     with:
       python-root-list: "python_alelo tests"
       use-pylint: false
@@ -60,7 +60,7 @@ black --check $(extra-black-options) $(python-root-list)
 
 mypy $(extra-mypy-options) $(python-root-list)"
 
-isort -rc $(extra-isort-options) $(python-root-list) -c --diff
+isort $(extra-isort-options) $(python-root-list) -c --diff
 ```
 
 ## Versions used
