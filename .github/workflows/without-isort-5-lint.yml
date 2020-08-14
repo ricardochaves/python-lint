@@ -1,4 +1,4 @@
-name: Python Lint
+name: without-isort-5-lint
 
 on: [push]
 

@@ -2,6 +2,11 @@
 
 ## Status
 
+<p align="left">
+  <a href="https://github.com/ricardochaves/python-lint"><img alt="All lints status" src="https://github.com/ricardochaves/python-lint/workflows/all-lints/badge.svg"></a></p> <p align="left">
+  <a href="https://github.com/ricardochaves/python-lint"><img alt="With Isort 5 status" src="https://github.com/ricardochaves/python-lint/workflows/with-isort-5-lint/badge.svg"></a></p> <p align="left">
+  <a href="https://github.com/ricardochaves/python-lint"><img alt="Without isort 5 status" src="https://github.com/ricardochaves/python-lint/workflows/without-isort-5-lint/badge.svg"></a></p>
+
 > [Pylint](https://www.pylint.org/) is not compatible with [Isort 5](https://github.com/timothycrosley/isort). So if you use all enabled lints, it fails in version 1.2.0
 
 ## Limitations
