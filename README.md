@@ -2,13 +2,15 @@
 
 ## Status
 
-> [Pylint](https://www.pylint.org/) is not compatible with [Isort 5](https://github.com/timothycrosley/isort). So if you use all enabled lints, it fails.
+> [Pylint](https://www.pylint.org/) is not compatible with [Isort 5](https://github.com/timothycrosley/isort). So if you use all enabled lints, it fails in version 1.2.0
 
-| Scenario        |                                                                                                 Status                                                                                                 |
-| --------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| all lints       | <p align="left"> <a href="https://github.com/ricardochaves/python-lint"><img alt="GitHub Actions status" src="https://github.com/ricardochaves/python-lint/workflows/Python%20Lint/badge.svg"></a></p> |
-| With isort 5    | <p align="left"> <a href="https://github.com/ricardochaves/python-lint"><img alt="GitHub Actions status" src="https://github.com/ricardochaves/python-lint/workflows/Python%20Lint/badge.svg"></a></p> |
-| Without isort 5 | <p align="left"> <a href="https://github.com/ricardochaves/python-lint"><img alt="GitHub Actions status" src="https://github.com/ricardochaves/python-lint/workflows/Python%20Lint/badge.svg"></a></p> |
+## Limitations
+
+You can't use Isort 5 with Pylint.
+
+If you wanna use Pylint with isort 4 use the `1.1.0` version.
+
+If you wanna use Isort 5 without pylint use the version `1.2.0` and disable pylint
 
 ## About
 
