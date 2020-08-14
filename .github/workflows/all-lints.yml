@@ -1,0 +1,13 @@
+name: all-lints
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ricardochaves/python-lint@v1.1.0
+        with:
+          python-root-list: "tests"
