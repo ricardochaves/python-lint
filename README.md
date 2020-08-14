@@ -1,8 +1,16 @@
 # python-lint
 
-<p align="left">
-  <a href="https://github.com/ricardochaves/python-lint"><img alt="GitHub Actions status" src="https://github.com/ricardochaves/python-lint/workflows/Python%20Lint/badge.svg"></a>
-</p>
+## Status
+
+> [Pylint](https://www.pylint.org/) is not compatible with [Isort 5](https://github.com/timothycrosley/isort). So if you use all enabled lints, it fails.
+
+| Scenario        |                                                                                                 Status                                                                                                 |
+| --------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| all lints       | <p align="left"> <a href="https://github.com/ricardochaves/python-lint"><img alt="GitHub Actions status" src="https://github.com/ricardochaves/python-lint/workflows/Python%20Lint/badge.svg"></a></p> |
+| With isort 5    | <p align="left"> <a href="https://github.com/ricardochaves/python-lint"><img alt="GitHub Actions status" src="https://github.com/ricardochaves/python-lint/workflows/Python%20Lint/badge.svg"></a></p> |
+| Without isort 5 | <p align="left"> <a href="https://github.com/ricardochaves/python-lint"><img alt="GitHub Actions status" src="https://github.com/ricardochaves/python-lint/workflows/Python%20Lint/badge.svg"></a></p> |
+
+## About
 
 This action must be used for aplication the bids:
 
