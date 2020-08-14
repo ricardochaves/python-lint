@@ -8,9 +8,9 @@
 
 You can't use Isort 5 with Pylint.
 
-If you wanna use Pylint with isort 4 use the `1.1.0` version.
+If you wanna use Pylint with isort 4 use the `v1.1.0` version.
 
-If you wanna use Isort 5 without pylint use the version `1.2.0` and disable pylint
+If you wanna use Isort 5 without pylint use the version `v1.2.0` and disable pylint
 
 ## About
 
