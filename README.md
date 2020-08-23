@@ -1,21 +1,7 @@
 # python-lint
 
-## Status
-
 <p align="left">
-  <a href="https://github.com/ricardochaves/python-lint"><img alt="All lints status" src="https://github.com/ricardochaves/python-lint/workflows/all-lints/badge.svg"></a></p> <p align="left">
-  <a href="https://github.com/ricardochaves/python-lint"><img alt="With Isort 5 status" src="https://github.com/ricardochaves/python-lint/workflows/with-isort-5-lint/badge.svg"></a></p> <p align="left">
-  <a href="https://github.com/ricardochaves/python-lint"><img alt="Without isort 5 status" src="https://github.com/ricardochaves/python-lint/workflows/without-isort-5-lint/badge.svg"></a></p>
-
-> [Pylint](https://www.pylint.org/) is not compatible with [Isort 5](https://github.com/timothycrosley/isort). So if you use all enabled lints, it fails in version 1.2.0
-
-## Limitations
-
-You can't use Isort 5 with Pylint.
-
-If you wanna use Pylint with isort 4 use the `v1.1.0` version.
-
-If you wanna use Isort 5 without pylint use the version `v1.2.0` and disable pylint
+  <a href="https://github.com/ricardochaves/python-lint"><img alt="All lints status" src="https://github.com/ricardochaves/python-lint/workflows/all-lints/badge.svg"></a></p>
 
 ## About
 
@@ -37,7 +23,7 @@ Basic:
 ```yml
 steps:
   - uses: actions/checkout@v1
-  - uses: ricardochaves/python-lint@v1.2.0
+  - uses: ricardochaves/python-lint@v1.3.0
 ```
 
 Options:
@@ -45,7 +31,7 @@ Options:
 ```yml
 steps:
   - uses: actions/checkout@v1
-  - uses: ricardochaves/python-lint@v1.2.0
+  - uses: ricardochaves/python-lint@v1.3.0
     with:
       python-root-list: "python_alelo tests"
       use-pylint: false
@@ -73,7 +59,7 @@ flake8 $(extra-flake8-options) $(python-root-list)
 
 black --check $(extra-black-options) $(python-root-list)
 
-mypy $(extra-mypy-options) $(python-root-list)"
+mypy $(extra-mypy-options) $(python-root-list)
 
 isort $(extra-isort-options) $(python-root-list) -c --diff
 ```
