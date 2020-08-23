@@ -54,7 +54,6 @@ inputs:
     required: false
     default: ""
 
-
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -72,3 +71,6 @@ runs:
     - ${{ inputs.extra-black-options }}
     - ${{ inputs.extra-mypy-options }}
     - ${{ inputs.extra-isort-options }}
+branding:
+  icon: "terminal"
+  color: "white"
