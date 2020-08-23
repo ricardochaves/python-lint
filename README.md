@@ -74,4 +74,4 @@ The scripts and documentation in this project are released under the [MIT Licens
 
 ## Contributions
 
-Contributions are welcome! See [Contributor's Guide](docs/contributors.md)
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
