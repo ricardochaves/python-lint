@@ -68,6 +68,27 @@ isort $(extra-isort-options) $(python-root-list) -c --diff
 
 To identify the version used you must consult the [CHANGELOG.md](https://github.com/ricardochaves/python-lint-image/blob/master/CHANGELOG.md) of the image used in our [Dockerfile](https://github.com/ricardochaves/python-lint-image/blob/master/Dockerfile).
 
+## Test locally
+
+Use [act](https://github.com/nektos/act) to test the action locally.
+Unfortunately it still doesn't work on all OSs, if you can't use it try the solution below.
+
+Some libs may behave differently between OSs.
+That's why this action runs on a docker image. This makes it possible for us to test some things locally.
+
+Using `docker compose`, add the following service
+
+```yml
+  test-lint:
+    image: ricardobchaves6/python-lint-image:1.3.0
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: ["mypy", "."]
+```
+
+Use the commands described in the section above. Choose the version of the image equivalent to the version of the action.
+
 ## License
 
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
