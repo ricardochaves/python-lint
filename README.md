@@ -22,7 +22,7 @@ Basic:
 
 ```yml
 steps:
-  - uses: actions/checkout@v1
+  - uses: actions/checkout@v4
   - uses: ricardochaves/python-lint@v1.4.0
 ```
 
@@ -30,7 +30,7 @@ Options:
 
 ```yml
 steps:
-  - uses: actions/checkout@v1
+  - uses: actions/checkout@v4
   - uses: ricardochaves/python-lint@v1.4.0
     with:
       python-root-list: "python_alelo tests"
